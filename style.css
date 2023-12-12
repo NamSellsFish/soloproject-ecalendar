@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:wght@400;500;600&display=swap');
+/* Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+/* Layout */
+body{
+    display: flex;
+        /* Nếu mà set 'align-items' & 'justify-content' 
+      như vậy thì nó sẽ căn cái item nằm giữa theo cả trục ngang & trục dọc */
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+        /* Ghi thế này là đang Bơm/hút sao đó cho padding trên dưới là 0, còn trái phải là 10px */
+    padding: 0 10px;
+        /* Chiều cao có thể tùy biến nhưng không dưới 100vh, cho nên mày có thể các thấy các element
+       ở dưới tụi nó chỉ set bề ngang */
+    min-height: 100vh;
+    padding: 5%;
+}
+main{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 1000px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    background-image: url(https://cdn.openart.ai/stable_diffusion/825d621242b01bd624ac265e9bfab5690a701133_2000x2000.webp), linear-gradient(180deg, rgba(209, 226, 188, 0.9) 0%, rgba(255, 255, 255, 0) 100%,  rgba(160, 236, 247, 0.5));
+}
+#calendar-portion{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    width: 65%;
+    background-color:white;
+}
+
+header{
+    display: flex;
+    /* This will lay out the child elements in a row */
+    justify-content: space-between;
+    /* This will put space between the child elements */
+    align-items: center;
+    /* This will vertically center the child elements in the container */
+    width: 100%;
+    /* Adjust the width as needed */
+    color:rgb(20, 220, 220);
+    padding: 1em;
+}
+#calendar-area{
+    padding-top: 2em;
+    display: flex;
+    align-items: start;
+
+}
+#calendar-portion ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+    width: 100%;
+}
+
+#khuôn-factory{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:1000px;
+    border: 1px solid red;
+}
+
+
+
+
+/* Components */
+.bệ-đúc-khuôn{
+    width: 100%;
+    padding: 1em;
+    border: 1px solid red;
+}
+
+span{
+    width: 12.5%;
+    cursor: pointer;
+    text-align: center;
+    padding: 30% 0;
+    user-select: none;
+    color: rgb(20, 220, 220);
+}
+
+span:hover {
+    color: green;
+}
+
+#week{
+    font-weight: bold;
+}
+#months{
+    font-size: 1.3rem;
+    border-bottom: 2px solid black;
+    margin-bottom: 1em;
+    font-weight: bolder;
+}
+#months #current-month{
+    font-weight: bold;
+    color: #7cc0c9
+}
+#dates li{
+    width: calc(100%/7);
+    position:relative;
+    text-align: center;
+    padding: 1.1em;
+    cursor: pointer;
+    font-style: normal;
+    font-weight: 300;
+}
+
+#dates li:hover::before{
+    /* Mọi thẻ li trong ul .days đều có có vầng tròn tròn, đặt ở vị trí như được liệt kê ở dưới,
+      bao quanh  */
+        position: absolute;
+        content: "";
+        left: 50%;
+        top: 50%;
+        height: 2.2em;
+        width: 2.2em;
+        /* Đẩy xuống dưới 1 lớp để không bị khuất chữ */
+        z-index: -1;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        background: #f2f2f2;
+}
+
+#dates .inactive{
+    color: grey;
+    font-style: italic;
+    font-weight: lighter;
+}
+
+#dates .weekend {
+    color: #7cc0c9
+}
+
+#dates #current-date{
+    color: white;
+    background: #60bac6;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+
+
+
+

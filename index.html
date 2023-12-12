@@ -3,73 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <title>eCalendar</title>
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <main id="calendar" class="calendar">
-        <section id="calendar-portion">
-                    <span class="calendar-title">OCTOBER</span>
-                    <span class="calendar-title">NOVEMBER</span>
-                    <span class="calendar-title">DECEMBER</span>
-                    
-                    <table>
-                        <tr>
-                            <td class="calendar-day">SUN</td>
-                            <td class="calendar-day">MON</td>
-                            <td class="calendar-day">TUE</td>
-                            <td class="calendar-day">WED</td>
-                            <td class="calendar-day">THU</td>
-                            <td class="calendar-day">FRI</td>
-                            <td class="calendar-day">SAT</td>
-                        </tr>
-                        <tr>
-                            <td class="calendar-day">27</td>
-                            <td class="calendar-day">28</td>
-                            <td class="calendar-day">29</td>
-                            <td class="calendar-day">30</td>
-                            <td class="calendar-day">31</td>
-                            <td class="calendar-day">1</td>
-                            <td class="calendar-day">2</td>
-                        </tr>
-                        <tr>
-                            <td class="calendar-day">3</td>
-                            <td class="calendar-day">4</td>
-                            <td class="calendar-day">5</td>
-                            <td class="calendar-day">6</td>
-                            <td class="calendar-day">7</td>
-                            <td class="calendar-day">8</td>
-                            <td class="calendar-day">9</td>
-                        </tr>
-                        <tr>
-                            <td class="calendar-day">10</td>
-                            <td class="calendar-day">11</td>
-                            <td class="calendar-day">12</td>
-                            <td class="calendar-day">13</td>
-                            <td class="calendar-day">14</td>
-                            <td class="calendar-day">15</td>
-                            <td class="calendar-day">16</td>
-                        </tr>
-                        <tr>
-                            <td class="calendar-day">17</td>
-                            <td class="calendar-day">18</td>
-                            <td class="calendar-day">19</td>
-                            <td class="calendar-day">20</td>
-                            <td class="calendar-day">21</td>
-                            <td class="calendar-day">22</td>
-                            <td class="calendar-day">23</td>
-                        </tr>
-                        <tr>
-                            <td class="calendar-day">24</td>
-                            <td class="calendar-day">25</td>
-                            <td class="calendar-day">26</td>
-                            <td class="calendar-day">27</td>
-                            <td class="calendar-day">28</td>
-                            <td class="calendar-day">29</td>
-                            <td class="calendar-day">30</td>
-                        </tr>
-                    </table>
+    <main>
+        <div id="calendar-portion">
+        <header id="title-and-current-year">
+                <h1>eCalendar</h1>
+        </header>
+        <section id="calendar-area">
+                <span id="prev" class="material-symbols-outlined">
+                    chevron_left
+                </span>
+                <div id="calendar">
+                    <ul id="months">
+                    </ul>
+                <ul id="week">
+                </ul>
+                <ul id="dates">
+            </ul>
+            </div>
+                <span id="next" class="material-symbols-outlined">
+                    chevron_right
+                </span>
         </section>
-        <section id="event-list-portion"></section>
+        </div>
+        <div id="event-list">
+            <header id="title-and-current-year">
+            
+            </header>
+        </div>
     </main>
+
 </body>
 </html>
