@@ -4,6 +4,8 @@ let weekTag = document.querySelector("#week");
 let titleTag = document.querySelector("header"),
   currentDate = document.querySelector("#current-date"),
   prevNextIcon = document.querySelectorAll("span");
+let addEventBtn = document.querySelector("#add-event");
+let eventFormModal = document.querySelector("dialog");
 
 // getting new date, current year and month
 let date = new Date(),
@@ -87,7 +89,12 @@ prevNextIcon.forEach((icon) => {
   icon.addEventListener("click", () => {
     // adding click event on both icons
     // if clicked icon is previous icon then decrement current month by 1 else increment it by 1
-    currMonth = icon.id === "prev" ? currMonth - 1 : currMonth + 1;
+    currMonth =
+      icon.id === "prev"
+        ? currMonth - 1
+        : icon.id === "next"
+        ? currMonth + 1
+        : currMonth;
 
     if (currMonth < 0 || currMonth > 11) {
       // if current month is less than 0 or greater than 11
@@ -100,4 +107,20 @@ prevNextIcon.forEach((icon) => {
     }
     renderCalendar(); // calling renderCalendar function
   });
+});
+
+addEventBtn.addEventListener("click", () => {
+  eventFormModal.showModal(); // Opens a modal
+});
+
+eventFormModal.addEventListener("click", (e) => {
+  const dialogDimensions = eventFormModal.getBoundingClientRect();
+  if (
+    e.clientX < dialogDimensions.left ||
+    e.clientX > dialogDimensions.right ||
+    e.clientY < dialogDimensions.top ||
+    e.clientY > dialogDimensions.bottom
+  ) {
+    eventFormModal.close();
+  }
 });

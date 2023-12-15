@@ -23,18 +23,18 @@ body{
 }
 main{
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
     align-items: center;
     width: 1000px;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-    background-image: url(https://cdn.openart.ai/stable_diffusion/825d621242b01bd624ac265e9bfab5690a701133_2000x2000.webp), linear-gradient(180deg, rgba(209, 226, 188, 0.9) 0%, rgba(255, 255, 255, 0) 100%,  rgba(160, 236, 247, 0.5));
+    background-image: url(https://cdn.openart.ai/stable_diffusion/825d621242b01bd624ac265e9bfab5690a701133_2000x2000.webp), linear-gradient(180deg, rgba(209, 226, 188, 0.9), rgba(255, 255, 255, 0),  rgba(160, 236, 247, 0.5));
 }
 #calendar-portion{
     display: flex;
     justify-content: start;
     align-items: start;
     flex-direction: column;
-    width: 65%;
+    width: 64%;
     background-color:white;
 }
 
@@ -47,14 +47,16 @@ header{
     /* This will vertically center the child elements in the container */
     width: 100%;
     /* Adjust the width as needed */
-    color:rgb(20, 220, 220);
     padding: 1em;
 }
+#title-and-current-year{
+    color: rgb(20, 220, 220);
+}
+
 #calendar-area{
     padding-top: 2em;
     display: flex;
     align-items: start;
-
 }
 #calendar-portion ul{
     display: flex;
@@ -65,6 +67,16 @@ header{
     width: 100%;
 }
 
+
+#event-portion{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    flex-direction: column;
+    align-self: self-start;
+    min-height: 70vh;
+    color: white;
+}
 #khuôn-factory{
     display: flex;
     justify-content: center;
@@ -152,10 +164,55 @@ span:hover {
     border-radius: 50%;
 }
 
+#event-list{
+    align-self: start;  
+}
 
+#current-date-display{
+    padding-left: 10%;
+    font-size:150%;
+}
 
+h3{
+    padding-bottom: 15%;
+    padding-top: 5%;
+}
 
+table{
+    padding-bottom:40%
+}
 
+td{
+    padding-bottom: 10%;
+    padding-right: 10%;
+    font-size: 150%;
+
+}
+
+.event-date{
+    color: aqua;
+    border-right: 1px solid white;
+    text-align:left;
+    font-weight: bold;
+}
+ 
+#event-portion p {
+    padding-right: 5%;
+}
+
+#event-btn{
+    padding-right: 5%
+}
+#event-btn label{
+    font-size:larger
+}
+#add-event{
+    border-style: none;
+    border-radius: 50%;
+    font-size:larger;   
+    padding: 0.3em;
+    color:#7cc0c9;
+}
 
 
 
