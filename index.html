@@ -65,10 +65,43 @@
         </div>
     </main>
     <modal>
-<dialog>
+<dialog>  
     <form method="dialog">
-        <input type="text" />
-        <button type="submit">Submit</button>
+        <button formmethod="dialog" type="submit">X</button>
+        <div id="event-form">
+        <input type="text" placeholder="Event" />
+        <ul>
+            <li class="event-date">Start Date</li>
+            <li>Month</li>
+            <li>Day</li>
+            <li class="event-date">End Date</li>
+            <li>Month</li>
+            <li>Day</li>
+        </ul>
+        <table>
+            <tr>
+                <td><span class="material-symbols-outlined">
+                        person_add
+                    </span></td>
+                <td>People</td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="material-symbols-outlined">
+                        explore
+                    </span>
+                </td>
+                <td>Location</td>
+            </tr>
+            <tr>
+                <td><span class="material-symbols-outlined">
+                        reorder
+                    </span></td>
+                <td>Description</td>
+            </tr>
+        </table>
+        </div>
+        <button id="submit-btn" type="submit">Save Event</button>
     </form>
 </dialog>
     </modal>

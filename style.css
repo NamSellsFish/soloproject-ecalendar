@@ -1,64 +1,58 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:wght@400;500;600&display=swap');
-/* Reset */
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Montserrat';
 }
-/* Layout */
-body{
+
+body {
     display: flex;
-        /* Nếu mà set 'align-items' & 'justify-content' 
-      như vậy thì nó sẽ căn cái item nằm giữa theo cả trục ngang & trục dọc */
     align-items: center;
     justify-content: center;
     flex-direction: column;
-        /* Ghi thế này là đang Bơm/hút sao đó cho padding trên dưới là 0, còn trái phải là 10px */
-    padding: 0 10px;
-        /* Chiều cao có thể tùy biến nhưng không dưới 100vh, cho nên mày có thể các thấy các element
-       ở dưới tụi nó chỉ set bề ngang */
-    min-height: 100vh;
     padding: 5%;
+    min-height: 100vh;
 }
-main{
+
+main {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 1000px;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-    background-image: url(https://cdn.openart.ai/stable_diffusion/825d621242b01bd624ac265e9bfab5690a701133_2000x2000.webp), linear-gradient(180deg, rgba(209, 226, 188, 0.9), rgba(255, 255, 255, 0),  rgba(160, 236, 247, 0.5));
+    background-image: url(https://cdn.openart.ai/stable_diffusion/825d621242b01bd624ac265e9bfab5690a701133_2000x2000.webp), linear-gradient(180deg, rgba(209, 226, 188, 0.9), rgba(255, 255, 255, 0), rgba(160, 236, 247, 0.5));
 }
-#calendar-portion{
+
+#calendar-portion {
     display: flex;
     justify-content: start;
     align-items: start;
     flex-direction: column;
     width: 64%;
-    background-color:white;
+    background-color: white;
 }
 
-header{
+header {
     display: flex;
-    /* This will lay out the child elements in a row */
     justify-content: space-between;
-    /* This will put space between the child elements */
     align-items: center;
-    /* This will vertically center the child elements in the container */
     width: 100%;
-    /* Adjust the width as needed */
     padding: 1em;
 }
-#title-and-current-year{
+
+#title-and-current-year {
     color: rgb(20, 220, 220);
 }
 
-#calendar-area{
+#calendar-area {
     padding-top: 2em;
     display: flex;
     align-items: start;
 }
-#calendar-portion ul{
+
+#calendar-portion ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -67,8 +61,7 @@ header{
     width: 100%;
 }
 
-
-#event-portion{
+#event-portion {
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
@@ -77,26 +70,22 @@ header{
     min-height: 70vh;
     color: white;
 }
-#khuôn-factory{
+
+form {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    width:1000px;
-    border: 1px solid red;
+    align-items: flex-end;
 }
 
-
-
-
-/* Components */
-.bệ-đúc-khuôn{
-    width: 100%;
-    padding: 1em;
-    border: 1px solid red;
+form ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    padding-left: 18%;
 }
 
-span{
+span {
     width: 12.5%;
     cursor: pointer;
     text-align: center;
@@ -109,22 +98,25 @@ span:hover {
     color: green;
 }
 
-#week{
+#week {
     font-weight: bold;
 }
-#months{
+
+#months {
     font-size: 1.3rem;
     border-bottom: 2px solid black;
     margin-bottom: 1em;
     font-weight: bolder;
 }
-#months #current-month{
+
+#months #current-month {
     font-weight: bold;
-    color: #7cc0c9
+    color: #7cc0c9;
 }
-#dates li{
+
+#dates li {
     width: calc(100%/7);
-    position:relative;
+    position: relative;
     text-align: center;
     padding: 1.1em;
     cursor: pointer;
@@ -132,89 +124,126 @@ span:hover {
     font-weight: 300;
 }
 
-#dates li:hover::before{
-    /* Mọi thẻ li trong ul .days đều có có vầng tròn tròn, đặt ở vị trí như được liệt kê ở dưới,
-      bao quanh  */
-        position: absolute;
-        content: "";
-        left: 50%;
-        top: 50%;
-        height: 2.2em;
-        width: 2.2em;
-        /* Đẩy xuống dưới 1 lớp để không bị khuất chữ */
-        z-index: -1;
-        border-radius: 50%;
-        transform: translate(-50%, -50%);
-        background: #f2f2f2;
+#dates li:hover::before {
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 50%;
+    height: 2.2em;
+    width: 2.2em;
+    z-index: -1;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background: #f2f2f2;
 }
 
-#dates .inactive{
+#dates .inactive {
     color: grey;
     font-style: italic;
     font-weight: lighter;
 }
 
 #dates .weekend {
-    color: #7cc0c9
+    color: #7cc0c9;
 }
 
-#dates #current-date{
+#dates #current-date {
     color: white;
     background: #60bac6;
     border-radius: 50%;
 }
 
-#event-list{
-    align-self: start;  
+#event-list {
+    align-self: start;
 }
 
-#current-date-display{
+#current-date-display {
     padding-left: 10%;
-    font-size:150%;
+    font-size: 150%;
 }
 
-h3{
+h3 {
     padding-bottom: 15%;
     padding-top: 5%;
 }
 
-table{
-    padding-bottom:40%
+table {
+    padding-bottom: 40%;
 }
 
-td{
+td {
     padding-bottom: 10%;
     padding-right: 10%;
     font-size: 150%;
-
 }
 
-.event-date{
+.event-date {
     color: aqua;
     border-right: 1px solid white;
-    text-align:left;
+    text-align: left;
     font-weight: bold;
 }
- 
+
 #event-portion p {
     padding-right: 5%;
 }
 
-#event-btn{
-    padding-right: 5%
+#event-btn {
+    padding-right: 5%;
 }
-#event-btn label{
-    font-size:larger
+
+#event-btn label {
+    font-size: larger;
 }
-#add-event{
+
+#add-event {
     border-style: none;
     border-radius: 50%;
-    font-size:larger;   
+    font-size: larger;
     padding: 0.3em;
-    color:#7cc0c9;
+    color: #7cc0c9;
 }
 
+dialog {
+    position: relative;
+    top: 20%;
+    left: 25%;
+    width: 750px;
+    padding: 1% 3%;
+}
 
+form ul li {
+    padding: 5%;
+}
 
+#event-form {
+    align-self: self-start;
+}
 
+#event-form table {
+    padding-bottom: 0;
+}
 
+form input {
+    border-style: none;
+    border-bottom: 2px solid black;
+    width: 150%;
+    padding-top: 1em;
+}
+
+form input::placeholder {
+    color: #7cc0c9;
+    font-size: 200%;
+}
+
+form button {
+    border-style: none;
+    background-color: white;
+}
+
+#submit-btn {
+    background-color: #60bac6;
+    color: white;
+    padding: 1%;
+    border-radius: 5%;
+}
