@@ -82,7 +82,7 @@ General instructions for all Pre-Work Projects can also be found in the Chingu V
 
 **Extras (Not Required)**
 
-- [x] Make your design fully responsive *(small/large/portrait/landscape, etc.)*
+- [ ] Make your design fully responsive *(small/large/portrait/landscape, etc.)*
 - [ ] optimized loading of calendar site (hint, consider the background image)
 
 ## Example
