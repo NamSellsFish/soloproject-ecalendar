@@ -20,7 +20,7 @@ General instructions for all Pre-Work Projects can also be found in the Chingu V
 
 - [x] Page divided into calendar potion and event list portion
 
-- [ ] Calendar portion to have:  
+- [x] Calendar portion to have:  
 
   - [x] Title and Current year in header  
   - [x] Current month between previous and upcoming month 
