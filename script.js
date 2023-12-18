@@ -31,6 +31,7 @@ const months = [
 
 const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 const renderCalendar = () => {
+  currentDateDis.innerHTML = "";
   datesTag.innerHTML = "";
   monthsTag.innerHTML = "";
   weekTag.innerHTML = "";
@@ -83,8 +84,8 @@ const renderCalendar = () => {
   }
   console.log(currentDateDis.innerHTML);
   currentDateDis.innerHTML += ` 
-          <p>${days[date.getDay()]}day</p>
-          <h3>${months[date.getMonth()]} ${date.getDate()}</h3>
+          <p>${days[new Date().getDay()]}</p>
+          <h3>${months[new Date().getMonth()]} ${new Date().getDate()}</h3>
     `;
 };
 
@@ -101,7 +102,6 @@ prevNextIcon.forEach((icon) => {
         : icon.id === "next"
         ? currMonth + 1
         : currMonth;
-
     if (currMonth < 0 || currMonth > 11) {
       // if current month is less than 0 or greater than 11
       // creating a new date of current year & month and pass it as date value
