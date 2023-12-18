@@ -1,7 +1,8 @@
 let datesTag = document.querySelector("#dates");
 let monthsTag = document.querySelector("#months");
 let weekTag = document.querySelector("#week");
-let titleTag = document.querySelector("header"),
+let titleTag = document.querySelector("header");
+let currentDateDis = document.querySelector("#current-date-display"),
   currentDate = document.querySelector("#current-date"),
   prevNextIcon = document.querySelectorAll("span");
 let addEventBtn = document.querySelector("#add-event");
@@ -80,6 +81,11 @@ const renderCalendar = () => {
   for (let i = lastDayOfMonth; i < 6; i++) {
     datesTag.innerHTML += `<li class="inactive">${i - lastDayOfMonth + 1}</li>`;
   }
+  console.log(currentDateDis.innerHTML);
+  currentDateDis.innerHTML += ` 
+          <p>${days[date.getDay()]}day</p>
+          <h3>${months[date.getMonth()]} ${date.getDate()}</h3>
+    `;
 };
 
 renderCalendar();
