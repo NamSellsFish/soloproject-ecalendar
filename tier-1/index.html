@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <title>eCalendar</title>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <div id="calendar-portion">
+        <header id="title-and-current-year">
+          <h1>eCalendar</h1>
+        </header>
+        <section id="calendar-area">
+          <span id="prev" class="material-symbols-outlined">
+            chevron_left
+          </span>
+          <div id="calendar">
+            <ul id="months"></ul>
+            <ul id="week"></ul>
+            <ul id="dates"></ul>
+          </div>
+          <span id="next" class="material-symbols-outlined">
+            chevron_right
+          </span>
+        </section>
+      </div>
+      <div id="event-portion">
+        <p>Sign In</p>
+        <div id="event-list">
+          <div id="current-date-display"></div>
+
+          <table>
+            <tbody>
+              <tr>
+                <td class="event-date">10</td>
+                <td class="event-detail">Dentist Appointment</td>
+              </tr>
+              <tr>
+                <td class="event-date">15</td>
+                <td class="event-detail">F*ck Mary</td>
+              </tr>
+              <tr>
+                <td class="event-date">20</td>
+                <td class="event-detail">Save the world</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="event-btn">
+          <label for="add-event">Add An Event</label>
+          <input type="button" id="add-event" value="+" />
+        </div>
+      </div>
+    </main>
+    <modal>
+      <dialog>
+        <form method="dialog">
+          <button formmethod="dialog" type="submit">X</button>
+          <div id="event-form">
+            <input type="text" placeholder="Event" />
+            <ul>
+              <li class="event-date">Start Date</li>
+              <li>Month</li>
+              <li>Day</li>
+              <li class="event-date">End Date</li>
+              <li>Month</li>
+              <li>Day</li>
+            </ul>
+            <table>
+              <tr>
+                <td>
+                  <span class="material-symbols-outlined"> person_add </span>
+                </td>
+                <td>People</td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="material-symbols-outlined"> explore </span>
+                </td>
+                <td>Location</td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="material-symbols-outlined"> reorder </span>
+                </td>
+                <td>Description</td>
+              </tr>
+            </table>
+          </div>
+          <button id="submit-btn" type="submit">Save Event</button>
+        </form>
+      </dialog>
+    </modal>
+  </body>
+</html>
